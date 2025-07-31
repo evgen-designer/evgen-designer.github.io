@@ -1,0 +1,213 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* Reset and base styles */\
+* \{\
+  margin: 0;\
+  padding: 0;\
+  box-sizing: border-box;\
+\}\
+\
+body \{\
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;\
+  line-height: 1.6;\
+  color: #111827;\
+  background-color: #f9fafb;\
+\}\
+\
+/* Container and layout */\
+.container \{\
+  min-height: 100vh;\
+  display: flex;\
+  align-items: center;\
+  justify-content: center;\
+  padding: 2rem;\
+\}\
+\
+.content-wrapper \{\
+  max-width: 1200px;\
+  width: 100%;\
+  display: grid;\
+  grid-template-columns: 1fr;\
+  gap: 4rem;\
+  align-items: center;\
+\}\
+\
+/* Illustration section */\
+.illustration-section \{\
+  display: flex;\
+  justify-content: center;\
+\}\
+\
+.book-container \{\
+  position: relative;\
+  width: 320px;\
+  height: 320px;\
+\}\
+\
+.book-card \{\
+  position: absolute;\
+  inset: 0;\
+  background: linear-gradient(135deg, #fce7f3, #fbcfe8, #f9a8d4);\
+  border-radius: 1.5rem;\
+  transform: rotate(12deg);\
+  transition: transform 0.3s ease-in-out;\
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\
+  cursor: pointer;\
+\}\
+\
+.book-card:hover \{\
+  transform: rotate(6deg);\
+\}\
+\
+.book-inner \{\
+  position: absolute;\
+  inset: 1rem;\
+  background: white;\
+  border-radius: 0.75rem;\
+  display: flex;\
+  align-items: center;\
+  justify-content: center;\
+  overflow: hidden;\
+\}\
+\
+.book-image \{\
+  width: 100%;\
+  height: 100%;\
+  object-fit: cover;\
+\}\
+\
+/* Text section */\
+.text-section \{\
+  text-align: center;\
+\}\
+\
+.text-content \{\
+  margin-bottom: 1.5rem;\
+\}\
+\
+.main-title \{\
+  font-size: 2.5rem;\
+  font-weight: 700;\
+  color: #111827;\
+  line-height: 1.2;\
+  margin-bottom: 1rem;\
+\}\
+\
+.description \{\
+  font-size: 1.125rem;\
+  color: #4b5563;\
+  max-width: 28rem;\
+  margin: 0 auto;\
+\}\
+\
+/* CTA section */\
+.cta-section \{\
+  display: flex;\
+  flex-direction: column;\
+  gap: 1rem;\
+  align-items: center;\
+\}\
+\
+.cta-button \{\
+  display: inline-block;\
+  background-color: #3b82f6;\
+  color: white;\
+  padding: 2rem 3rem;\
+  border-radius: 9999px;\
+  font-size: 1.125rem;\
+  font-weight: 500;\
+  text-decoration: none;\
+  transition: background-color 0.2s ease-in-out;\
+\}\
+\
+.cta-button:hover \{\
+  background-color: #2563eb;\
+\}\
+\
+/* Social proof */\
+.social-proof \{\
+  display: flex;\
+  align-items: center;\
+  gap: 0.5rem;\
+  font-size: 0.875rem;\
+  color: #6b7280;\
+\}\
+\
+.social-text \{\
+  margin-right: 0.5rem;\
+\}\
+\
+.avatar-group \{\
+  display: flex;\
+  margin-left: -0.5rem;\
+\}\
+\
+.avatar \{\
+  width: 1.5rem;\
+  height: 1.5rem;\
+  border-radius: 50%;\
+  border: 2px solid white;\
+  object-fit: cover;\
+  margin-left: -0.5rem;\
+\}\
+\
+/* Responsive design */\
+@media (min-width: 1024px) \{\
+  .content-wrapper \{\
+    grid-template-columns: 1fr 1fr;\
+  \}\
+\
+  .illustration-section \{\
+    justify-content: flex-end;\
+  \}\
+\
+  .text-section \{\
+    text-align: left;\
+  \}\
+\
+  .main-title \{\
+    font-size: 3rem;\
+  \}\
+\
+  .description \{\
+    margin: 0;\
+  \}\
+\
+  .cta-section \{\
+    align-items: flex-start;\
+  \}\
+\
+  .social-proof \{\
+    justify-content: flex-start;\
+  \}\
+\}\
+\
+@media (max-width: 768px) \{\
+  .container \{\
+    padding: 1rem;\
+  \}\
+\
+  .content-wrapper \{\
+    gap: 2rem;\
+  \}\
+\
+  .book-container \{\
+    width: 280px;\
+    height: 280px;\
+  \}\
+\
+  .main-title \{\
+    font-size: 2rem;\
+  \}\
+\
+  .cta-button \{\
+    padding: 1.5rem 2.5rem;\
+    font-size: 1rem;\
+  \}\
+\}\
+}
