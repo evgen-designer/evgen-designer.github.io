@@ -15,7 +15,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: #f9fafb;
             line-height: 1.6;
-            overflow-x: hidden; /* Prevents horizontal scroll on small screens */
+            overflow-x: hidden;
         }
 
         .container {
@@ -31,14 +31,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 60px;
+            gap: 50px; /* Reduced gap */
         }
 
         .illustration {
             position: relative;
-            width: 300px;
-            height: 300px;
-            flex-shrink: 0; /* Prevents image from shrinking */
+            width: 280px; /* Reduced size */
+            height: 280px; /* Reduced size */
+            flex-shrink: 0;
         }
 
         .book-3d {
@@ -77,19 +77,19 @@
         }
 
         .title {
-            font-size: 48px;
+            font-size: 42px; /* Reduced size */
             font-weight: 800;
             color: #111827;
-            margin-bottom: 20px;
+            margin-bottom: 16px; /* Reduced margin */
             line-height: 1.1;
         }
 
         .subtitle {
-            font-size: 20px;
+            font-size: 18px; /* Reduced size */
             color: #6b7280;
-            margin-bottom: 40px;
+            margin-bottom: 32px; /* Reduced margin */
             line-height: 1.5;
-            max-width: 450px; /* Limits width on mobile too */
+            max-width: 450px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -98,9 +98,9 @@
             display: inline-block;
             background-color: #3b82f6;
             color: white;
-            padding: 20px 40px;
+            padding: 16px 36px; /* Reduced padding */
             border-radius: 50px;
-            font-size: 20px;
+            font-size: 18px; /* Reduced size */
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -118,7 +118,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px; /* CHANGED: Was 15px */
+            gap: 20px;
             font-size: 14px;
             color: #9ca3af;
         }
@@ -136,24 +136,25 @@
             object-fit: cover;
         }
 
-        /* --- DESKTOP LAYOUT CHANGES --- */
-        @media (min-width: 1024px) { /* Changed to a wider breakpoint for better effect */
+        /* DESKTOP LAYOUT */
+        @media (min-width: 1024px) {
             .main-content {
                 max-width: 1100px;
                 flex-direction: row;
-                justify-content: center; /* Center items within the offset container */
-                margin-left: 10vw;  /* CHANGED: This creates the offset from the left */
-                margin-right: 5vw; /* Balances the right side */
+                justify-content: center;
+                margin-left: 10vw;
+                margin-right: 5vw;
+                gap: 70px; /* Adjusted gap for desktop */
             }
 
             .content {
                 text-align: left;
-                width: auto; /* Let it be flexible */
-                max-width: 480px; /* CHANGED: Narrowed the text block */
+                width: auto;
+                max-width: 450px; /* Slightly narrowed */
             }
 
             .subtitle {
-                margin-left: 0; /* Remove mobile centering */
+                margin-left: 0;
                 margin-right: 0;
             }
 
@@ -162,27 +163,28 @@
             }
             
             .illustration {
-                width: 350px;
-                height: 350px;
+                width: 330px; /* Reduced size */
+                height: 330px; /* Reduced size */
             }
 
             .title {
-                font-size: 56px;
+                font-size: 50px; /* Reduced size */
             }
         }
-
+        
+        /* MOBILE-SPECIFIC TWEAKS (if needed) */
         @media (max-width: 480px) {
             .title {
-                font-size: 36px;
+                font-size: 34px;
             }
 
             .subtitle {
-                font-size: 18px;
+                font-size: 17px;
             }
 
             .cta-button {
-                padding: 16px 32px;
-                font-size: 18px;
+                padding: 15px 30px;
+                font-size: 17px;
             }
         }
 
