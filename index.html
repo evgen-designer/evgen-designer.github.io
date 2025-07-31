@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keepiko - Get Early Access</title>
     <style>
+        /* CSS changes are marked with comments */
         * {
             margin: 0;
             padding: 0;
@@ -70,6 +71,7 @@
             font-size: 48px;
             color: #f9a8d4;
             font-weight: bold;
+            overflow: hidden; /* Added to contain the image */
         }
 
         .content {
@@ -98,11 +100,11 @@
             color: white;
             padding: 20px 40px;
             border-radius: 50px;
-            font-size: 18px;
+            font-size: 20px; /* CHANGED: Was 18px */
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            margin-bottom: 30px;
+            margin-bottom: 20px; /* CHANGED: Was 30px to move social proof up */
             box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
@@ -116,58 +118,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 15px; /* CHANGED: Was 12px to add space */
             font-size: 14px;
             color: #9ca3af;
         }
 
         .avatars {
             display: flex;
-            margin-left: -8px;
         }
 
         .avatar {
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            border: 2px solid white;
-            margin-left: -8px;
-            background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
-            color: #6b7280;
+            border: 2px solid #f9fafb; /* Changed to background color */
+            margin-left: -12px; /* Adjusted for better overlap */
+            object-fit: cover; /* Added for images */
         }
-
-        .avatar:nth-child(1) { background: linear-gradient(45deg, #fef3c7, #fbbf24); }
-        .avatar:nth-child(2) { background: linear-gradient(45deg, #ddd6fe, #8b5cf6); }
-        .avatar:nth-child(3) { background: linear-gradient(45deg, #fce7f3, #ec4899); }
 
         /* Responsive Design */
         @media (min-width: 768px) {
-            .main-content {
-                flex-direction: row;
-                gap: 80px;
-            }
-
+            /* This section was changed to keep everything centered */
             .illustration {
                 width: 350px;
                 height: 350px;
             }
 
-            .content {
-                text-align: left;
-                flex: 1;
-            }
-
             .title {
                 font-size: 56px;
-            }
-
-            .social-proof {
-                justify-content: flex-start;
             }
         }
 
@@ -182,7 +160,7 @@
 
             .cta-button {
                 padding: 16px 32px;
-                font-size: 16px;
+                font-size: 18px; /* Adjusted for small screens */
             }
         }
 
@@ -213,7 +191,7 @@
             <div class="illustration">
                 <div class="book-3d">
                     <div class="book-inner">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Keepica-jRFadChFRKmeb37xOdf2vau7nJeAya.svg" alt="Keepica illustration" style="width: 100%; height: 100%; object-fit: cover;">
+                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Keepica-jRFadChFRKmeb37xOdf2vau7nJeAya.svg" alt="Keepica illustration" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
