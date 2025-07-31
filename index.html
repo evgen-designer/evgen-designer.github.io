@@ -4,64 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keepiko - Get Early Access</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f9fafb;
+            line-height: 1.6;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .illustration {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .book-3d {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%);
+            border-radius: 24px;
+            transform: rotate(12deg);
+            transition: transform 0.3s ease;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+        }
+
+        .book-3d:hover {
+            transform: rotate(6deg);
+        }
+
+        .book-inner {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #f9a8d4;
+            font-weight: bold;
+        }
+
+        .content {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #6b7280;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .avatars {
+            display: flex;
+            margin-left: -8px;
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-left: -8px;
+            background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #6b7280;
+        }
+
+        .avatar:nth-child(1) { background: linear-gradient(45deg, #fef3c7, #fbbf24); }
+        .avatar:nth-child(2) { background: linear-gradient(45deg, #ddd6fe, #8b5cf6); }
+        .avatar:nth-child(3) { background: linear-gradient(45deg, #fce7f3, #ec4899); }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .main-content {
+                flex-direction: row;
+                gap: 80px;
+            }
+
+            .illustration {
+                width: 350px;
+                height: 350px;
+            }
+
+            .content {
+                text-align: left;
+                flex: 1;
+            }
+
+            .title {
+                font-size: 56px;
+            }
+
+            .social-proof {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                padding: 16px 32px;
+                font-size: 16px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content > * {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .content > *:nth-child(2) { animation-delay: 0.1s; }
+        .content > *:nth-child(3) { animation-delay: 0.2s; }
+        .content > *:nth-child(4) { animation-delay: 0.3s; }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="content-wrapper">
-            <!-- Left side - Illustration -->
-            <div class="illustration-section">
-                <div class="book-container">
-                    <div class="book-card">
-                        <div class="book-inner">
-                            <img
-                                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Keepica-jRFadChFRKmeb37xOdf2vau7nJeAya.svg"
-                                alt="Keepica illustration"
-                                class="book-image"
-                            />
-                        </div>
+        <div class="main-content">
+            <div class="illustration">
+                <div class="book-3d">
+                    <div class="book-inner">
+                        📱
                     </div>
                 </div>
             </div>
 
-            <!-- Right side - Content -->
-            <div class="text-section">
-                <div class="text-content">
-                    <h1 class="main-title">Get early access to Keepiko</h1>
-                    <p class="description">
-                        The easiest way to organize home storage and inventory with your phone.
-                    </p>
-                </div>
-
-                <div class="cta-section">
-                    <a
-                        href="https://airtable.com/appObsABZVF3p9pPU/pagqZ0WsvoIrsyX0d/form"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="cta-button"
-                    >
-                        Join the waitlist
-                    </a>
-
-                    <div class="social-proof">
-                        <span class="social-text">32+ others just joined</span>
-                        <div class="avatar-group">
-                            <img
-                                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-khLazg7B8uE3ELhXEFQTvAnSp4U7wl.png"
-                                alt="User avatar"
-                                class="avatar"
-                            />
-                            <img
-                                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Q2WeQYvyVtCLKEdjCavgK3CmBSRvGc.png"
-                                alt="User avatar"
-                                class="avatar"
-                            />
-                            <img
-                                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1ESZaJJaWCsW580pvV0c7QRMPTL0hH.png"
-                                alt="User avatar"
-                                class="avatar"
-                            />
-                        </div>
+            <div class="content">
+                <h1 class="title">Get early access to Keepiko</h1>
+                <p class="subtitle">
+                    The easiest way to organize home storage and inventory with your phone.
+                </p>
+                <a href="https://airtable.com/appObsABZVF3p9pPU/pagqZ0WsvoIrsyX0d/form" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="cta-button">
+                    Join the waitlist
+                </a>
+                <div class="social-proof">
+                    <span>32+ others just joined</span>
+                    <div class="avatars">
+                        <div class="avatar">A</div>
+                        <div class="avatar">B</div>
+                        <div class="avatar">C</div>
                     </div>
                 </div>
             </div>
